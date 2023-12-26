@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
     <script src="jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="foBuilder.min.js" type="text/javascript"></script>
 
-    <link href="foBuilder.min.css" rel="stylesheet" />
+    <link href="foBuilder.min.css" rel="stylesheet"/>
     <title>Fallout 4 Automatic Character Builder</title>
-  </head>
-  <body>
+</head>
+<body>
+	
     <center>
-      <img src="1_Fallout_4_logo.png" />
-      <br />
-      <br />
-      <div id="container">
+        <img src="1_Fallout_4_logo.png" />
         <br />
         <br />
-        <div id="perkSelect"></div>
-        <br />
-        <div id="perk"></div>
-        <br />
-        <div id="progress"></div>
-        <br />
-        <button onclick="calculate();">Calculate</button>&nbsp;<button
-          onclick="reset()"
-        >
-          Reset</button
-        >&nbsp;<button onclick="selectAll()">Select All</button><br />
-        <br />
-        <div id="char"></div>
-        <div class="levelList" id="levelLista"></div>
-        <div class="levelList" id="levelListb"></div>
-        <div class="levelList" id="levelListc"></div>
-        <div class="levelList" id="levelListd"></div>
-        <br />
-        <!--        <div id="test"></div>-->
-        <br />
-        <br />
-      </div>
+        <div id="container">
+            <br />
+            <br />
+			<div id="directions">
+				<p>
+					<ul>
+						<li>To use: </li>
+						<li>
+							<ol>
+								<li>Select your desired perks</li>
+								<li>Select the priorities for the perks in the PRI column</li>
+								<li>Click Calculate</li>
+								<li>Play Fallout 4</li>
+							</ol>
+						</li>
+					</ul>
+				</p>
+			</div>
+            <br />
+            <div id="perkSelect">
+            </div>
+            <br />
+            <div id="perk"></div>
+            <br />
+            <div id="progress"></div>
+            <br />
+			<button id="togglePointsButton" onclick="toggleCharacterPoints()">Toggle Bobbles/Special Book</button>
+            <button onmouseup="calculateL();">Calculate Per Level</button>&nbsp;<button onmouseup="calculateP();">Calculate Per Priority</button>&nbsp;<button onmouseup="reset()">Reset</button>&nbsp;<button onmouseup="selectAll()">Select All</button>&nbsp;<button onmousedown="random()">Random</button>&nbsp;<button onmouseup="exportLevels()">Save List</button><br />
+            <br />
+            <div id="char"></div>
+            <div class="levelList" id="levelLista"></div>
+            <div class="levelList" id="levelListb"></div>
+            <div class="levelList" id="levelListc"></div>
+            <div class="levelList" id="levelListd"></div>
+            <br />
+<!--        <div id="test"></div>-->
+            <br />
+            <br />
+
+        </div>
     </center>
-  </body>
+    
+    <div id="perkHover" style="display: none"></div>
+</body>
 </html>
